@@ -271,7 +271,7 @@ if ($eventTypeFilter !== 'all') {
 include '../includes/header.php';
 ?>
 
-        <div class="col-12">
+        <div class="container mt-4">
             <div class="d-flex justify-content-between align-items-center">
                 <h2>📅 Online kalendár</h2>
                 <div class="btn-group" role="group">
