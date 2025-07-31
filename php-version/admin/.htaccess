@@ -1,0 +1,15 @@
+# Allow access to admin directory
+<Files "*.php">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Set index file
+DirectoryIndex index.php
+
+# Prevent directory browsing
+Options -Indexes
+
+# Error pages
+ErrorDocument 403 /pages/login.php
+ErrorDocument 404 /pages/404.php

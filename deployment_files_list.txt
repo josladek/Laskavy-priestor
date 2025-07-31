@@ -1,0 +1,34 @@
+SÚBORY PRE MANUÁLNE NAHRANIE NA PRODUKČNÝ SERVER
+================================================
+
+FTP Server: ftpx.forpsi.com
+User: www.laskavypriestor.eu  
+Password: TU6faPvPhX
+Target Directory: /www/
+
+NOVÉ/AKTUALIZOVANÉ SÚBORY:
+========================
+
+1. php-version/pages/online-calendar.php - Interaktívny kalendár pre klientov
+2. php-version/pages/reports.php - Rozšírené reporty pre admin/lektorov  
+3. php-version/pages/communication.php - Hromadná komunikácia emailom
+4. php-version/pages/my-statistics.php - Štatistiky pre klientov
+5. php-version/pages/class-rating.php - Hodnotenie lekcií
+6. php-version/includes/functions.php - Aktualizované helper funkcie
+7. php-version/includes/email_functions.php - Nové email funkcie pre bulk komunikáciu
+8. php-version/includes/header.php - Aktualizované navigačné menu s ikonami
+
+MYSQL SQL SKRIPTY:
+==================
+Spustite mysql_updates.sql na produkčnej MySQL databáze
+
+NOVÉ FUNKCIE PO NASADENÍ:
+========================
+✅ Online kalendár s registráciou na lekcie
+✅ Klientské štatistiky a prehľady  
+✅ Hodnotenie lekcií s hviezdičkami
+✅ Rozšírené reporty s grafmi
+✅ Hromadná email komunikácia
+✅ Navigačné menu s ikonami pre všetky roly
+
+IP ADRESA PRE FTP PRÍSTUP: 34.30.171.89

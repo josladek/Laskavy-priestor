@@ -1,0 +1,67 @@
+📤 SÚBORY NA NAHRATIE NA PRODUKČNÝ SERVER - OPRAVY EMAIL VERIFIKÁCIE
+
+==============================================================================
+
+🎯 HLAVNÉ OPRAVY:
+- Session management warnings elimiated
+- Email verification function parameters fixed 
+- Debug logging added for email troubleshooting
+- Admin create user functionality completed
+
+==============================================================================
+
+📁 SÚBORY NA NAHRATIE (nahraďte na serveri):
+
+1. KONFIGURÁCIA:
+   php-version/config/config.php
+   → Opravené: session_status() check prevents multiple session starts
+
+2. REGISTRAČNÉ STRÁNKY:
+   php-version/pages/register.php
+   → Opravené: sendEmailVerification() parametre (3 namiesto 4)
+   
+   php-version/pages/resend-verification.php
+   → Opravené: sendEmailVerification() parametre + odstránený duplicitný session_start()
+
+3. EMAIL SYSTÉM:
+   php-version/includes/email_functions.php
+   → Pridané: debug logging pre email troubleshooting
+
+4. ADMIN PORTÁL:
+   php-version/admin/create-user.php
+   → Nový: kompletný formulár pre vytvorenie používateľov s validáciou
+
+5. DEBUG NÁSTROJ (voliteľný):
+   email_verification_test.php
+   → Testovací súbor pre debugging email funkcionalít
+
+==============================================================================
+
+🚀 POSTUP NAHRÁVANIA:
+
+1. FTP pripojenie na server www.laskavypriestor.eu
+2. Backup existujúcich súborov (pre istotu)
+3. Nahrať opravené súbory na správne cesty
+4. Testovať registráciu nového používateľa
+5. Skontrolovať PHP error log po teste
+
+==============================================================================
+
+✅ OČAKÁVANÉ VÝSLEDKY PO NAHRATÍ:
+
+- Žiadne session warnings v PHP error logu
+- Email verifikácia funguje bez chýb
+- Registrácia prebehne bez problémov
+- Admin môže vytvárať nových používateľov
+- Resend verification email funguje
+
+==============================================================================
+
+⚠️  DÔLEŽITÉ POZNÁMKY:
+
+- Ak emaily stále neprichádzajú, problém je v server mail() konfigurácii
+- Skontrolujte spam priečinok pri testovaní
+- PHP error log ukáže či sa emaily úspešne odoslali
+- Test nástroj email_verification_test.php pomôže s debugovaním
+
+==============================================================================

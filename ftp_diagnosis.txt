@@ -1,0 +1,50 @@
+🔍 FTP DIAGNOSIS REPORT - www.laskavypriestor.eu
+================================================
+
+Testovaná IP: 34.61.160.86 (Google Cloud, Iowa, USA)
+Target Server: www.laskavypriestor.eu (185.129.138.110)
+Date: 22 July 2025
+
+TESTS PERFORMED:
+================
+
+✓ IP allowlist added: 34.61.160.86
+✓ All restrictions reportedly lifted
+✓ Multiple connection attempts made
+
+❌ FAILED TESTS:
+- nc -z port 21: Connection refused
+- curl ftp://: Connection refused
+- lftp anonymous: Timeout
+- FTPS over SSL: Connection refused
+- Alternative ports (22, 2121, 990, 989): All refused
+
+DIAGNOSIS:
+==========
+
+The "Connection refused" error indicates:
+1. No FTP service running on port 21
+2. Firewall blocking all FTP connections
+3. Server may use different protocol/port
+4. FTP service may be disabled entirely
+
+RECOMMENDATIONS:
+================
+
+1. Check if hosting provider has FTP enabled
+2. Verify correct FTP hostname (may differ from domain)
+3. Try cPanel File Manager instead
+4. Check hosting panel for FTP settings
+5. Confirm FTP port number (may not be 21)
+
+PREPARED SOLUTION:
+==================
+
+Complete file package ready for manual upload:
+- upload_package/ directory contains all fixes
+- Session management corrected
+- Email verification repaired
+- Admin user creation form added
+- Detailed upload instructions included
+
+STATUS: Ready for manual deployment via hosting panel

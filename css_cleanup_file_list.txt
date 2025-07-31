@@ -1,0 +1,103 @@
+📋 CSS ČISTENIE - ZOZNAM SÚBOROV PRE MANUÁLNY FTP UPLOAD
+
+=======================================
+KOMPLETNE VYČISTENÉ PHP SÚBORY (10)
+=======================================
+
+PAGES ADRESÁR (/pages/):
+1. verify-email.php - ✅ vyčistená (3.9KB)
+2. resend-verification.php - ✅ vyčistená (4.6KB)  
+3. instructors.php - ✅ vyčistená (15.3KB)
+4. courses.php - ✅ vyčistená (13.1KB)
+5. my-classes.php - ✅ vyčistená (12.6KB)
+6. profile.php - ✅ vyčistená (10.7KB)
+7. my-courses.php - ✅ vyčistená (15.2KB)
+8. course-detail.php - ✅ vyčistená (17.4KB)
+9. class-rating.php - ✅ vyčistená (9.4KB)
+
+ADMIN ADRESÁR (/admin/):
+10. lecturers.php - ✅ vyčistená (10.1KB)
+
+=======================================
+ČISTIACE OPERÁCIE VYKONANÉ
+=======================================
+
+✅ Odstránené všetky <style> bloky
+✅ Nahradené komentármi: <!-- CSS moved to laskavypriestor.css -->
+✅ Zachované email šablóny (email.php, email_functions.php)
+✅ Všetky štýly centralizované v assets/css/laskavypriestor.css (671 riadkov)
+
+=======================================
+FTP UPLOAD STATUS
+=======================================
+
+🟢 ÚSPEŠNE NAHRANÉ DO KOREŇA:
+- verify-email.php (⚠️ presunúť do /pages/)
+- profile.php (⚠️ presunúť do /pages/)
+- my-courses.php (⚠️ presunúť do /pages/)
+- course-detail.php (⚠️ presunúť do /pages/)
+- class-rating.php (⚠️ presunúť do /pages/)
+- lecturers.php (⚠️ presunúť do /admin/)
+
+🔴 MANUÁLNE NAHRAŤ:
+- resend-verification.php → /pages/
+- instructors.php → /pages/
+- courses.php → /pages/
+- my-classes.php → /pages/
+
+=======================================
+POKYNY PRE DOKONČENIE
+=======================================
+
+1. Použite FTP klient (FileZilla, WinSCP, atď.)
+2. Pripojte sa na ftpx.forpsi.com
+3. Presunúte súbory z koreňa do správnych adresárov
+4. Nahrajte zostávajúce 4 súbory do /pages/
+5. Overte funkčnosť aplikácie
+
+FTP údaje:
+Server: ftpx.forpsi.com
+Login: www.laskavypriestor.eu
+Password: TU6faPvPhX
+
+=======================================
+VÝSLEDOK CSS ČISTENIA
+=======================================
+
+✅ 0 duplicitných CSS blokov v PHP súboroch
+✅ 671 riadkov konsolidovaných štýlov v laskavypriestor.css
+✅ Kompletný lokálny CSS systém bez CDN závislostí
+✅ Email šablóny zachované pre správne formátovanie
+
+Projekt má teraz čistú, udržateľnú CSS architektúru!
+
+=======================================
+GITHUB INTEGRÁCIA (31.7.2025 - 09:20)
+=======================================
+
+✅ Personal Access Token nastavený
+✅ GitHub účet pripojený k Replitu
+✅ Repozitár josladek/laskavypriestor.eu pripravený
+⚠️ Git lock súbory blokujú CLI operácie
+
+🎯 RIEŠENIE: Použiť Git panel v Replite (Tools → Add Git)
+
+📋 PRIPRAVENÝ COMMIT MESSAGE:
+"Inicialny commit: Láskavý Priestor yoga studio management system
+
+✅ CSS čistenie kompletne dokončené:
+- Odstránených všetkých 10 CSS blokov z PHP súborov  
+- 671 riadkov štýlov centralizovaných v laskavypriestor.css
+- Kompletný lokálny CSS systém bez CDN závislostí
+- Email šablóny zachované pre správne formátovanie
+
+🏗️ Systémová architektúra:
+- PHP 8.2+ yoga studio management system
+- MySQL databáza s kompletným user management
+- Role-based portály (klienti, lektori, admin)
+- Stripe platobný systém s QR kódmi
+- Pokročilý kalendárový systém (3-dňový, týždňový, mesačný)
+- Workshop a kurz management
+- Email verifikácia a notifikácie
+
+🌐 Production ready na: https://www.laskavypriestor.eu"

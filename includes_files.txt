@@ -1,0 +1,10 @@
+.
+..
+auth.php
+email_functions.php
+error_handler.php
+footer.php
+functions.php
+header.php
+image_upload.php
+qr_generator.php

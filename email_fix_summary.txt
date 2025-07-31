@@ -1,0 +1,37 @@
+🔧 EMAIL VERIFIKÁCIA - OPRAVY KÓDOVANIA A LINKU
+===============================================
+
+PROBLÉM:
+- Email verifikačná správa mala zlé kódovanie
+- Odkaz na verifikáciu nebol viditeľný
+- Používateľ nemohol dokončiť registráciu
+
+VYKONANÉ OPRAVY:
+================
+
+1. UTF-8 KÓDOVANIE HLAVIČIEK:
+   - Pridané base64 kódovanie pre predmet emailu
+   - Opravené Content-Type hlavičky s UTF-8
+   - Pridané Content-Transfer-Encoding: 8bit
+
+2. VIDITEĽNÝ VERIFIKAČNÝ LINK:
+   - Zachovaný pôvodný button s inline štýlmi
+   - Pridaný dodatočný textový link v rámčeku
+   - Link je teraz jasne viditeľný a klikateľný
+
+3. BEZPEČNOSŤ A KOMPATIBILITA:
+   - Použité htmlspecialchars() pre všetky linky
+   - Pridané inline štýly pre lepšiu kompatibilitu s email klientmi
+   - word-break: break-all pre dlhé linky
+
+TESTOVANIE:
+===========
+
+Po nahratí opráv otestujte:
+1. Registráciu nového používateľa
+2. Kontrolu emailu s verifikačným linkom
+3. Kliknutie na verifikačný link
+4. Dokončenie aktivácie účtu
+
+Súbor nahraný: includes/email_functions.php
+Dátum: 22. júl 2025

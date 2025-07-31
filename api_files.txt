@@ -1,0 +1,11 @@
+.
+..
+login.php
+logout.php
+register-class.php
+register-class-redirect.php
+register-class-simple.php
+register-course-nosession.php
+register-course.php
+register-course-simple.php
+register-workshop.php
