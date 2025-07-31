@@ -280,15 +280,15 @@ include '../includes/header.php';
                         <i class="fas fa-home me-2"></i>Dnes
                     </a>
                     <a href="?view=3day&date=<?= $currentDate ?>&type=<?= $eventTypeFilter ?>" 
-                       class="btn <?= $viewType === '3day' ? 'btn-success' : 'btn-outline-success' ?>">
+                       class="btn <?= $viewType === '3day' ? 'btn-success' : 'btn-outline-secondary' ?>">
                         <i class="fas fa-calendar-day me-2"></i>3 dni
                     </a>
                     <a href="?view=week&date=<?= $currentDate ?>&type=<?= $eventTypeFilter ?>" 
-                       class="btn <?= $viewType === 'week' ? 'btn-success' : 'btn-outline-success' ?>">
+                       class="btn <?= $viewType === 'week' ? 'btn-success' : 'btn-outline-secondary' ?>">
                         <i class="fas fa-calendar-week me-2"></i>Týždeň
                     </a>
                     <a href="?view=month&month=<?= $currentMonth ?>&year=<?= $currentYear ?>&type=<?= $eventTypeFilter ?>" 
-                       class="btn <?= $viewType === 'month' ? 'btn-success' : 'btn-outline-success' ?>">
+                       class="btn <?= $viewType === 'month' ? 'btn-success' : 'btn-outline-secondary' ?>">
                         <i class="fas fa-calendar me-2"></i>Mesiac
                     </a>
                 </div>
@@ -352,7 +352,7 @@ include '../includes/header.php';
                 <div class="row align-items-center">
                     <div class="col-2">
                         <a href="?view=3day&date=<?= date('Y-m-d', strtotime($currentDate . ' -3 days')) ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-left"></i>
                         </a>
                     </div>
@@ -362,7 +362,7 @@ include '../includes/header.php';
                     </div>
                     <div class="col-2">
                         <a href="?view=3day&date=<?= date('Y-m-d', strtotime($currentDate . ' +3 days')) ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
@@ -546,7 +546,7 @@ include '../includes/header.php';
                 <div class="row align-items-center">
                     <div class="col-2">
                         <a href="?view=week&date=<?= date('Y-m-d', strtotime($currentDate . ' -7 days')) ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-left"></i>
                         </a>
                     </div>
@@ -556,7 +556,7 @@ include '../includes/header.php';
                     </div>
                     <div class="col-2">
                         <a href="?view=week&date=<?= date('Y-m-d', strtotime($currentDate . ' +7 days')) ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
@@ -566,7 +566,7 @@ include '../includes/header.php';
             <div class="week-grid d-flex">
                 <!-- Time column -->
                 <div class="time-column" style="width: 80px; background: #f8f9fa;">
-                    <div class="time-header" style="height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; background: #28a745; color: white;">
+                    <div class="time-header" style="height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; background: #8db3a0; color: white;">
                         Čas
                     </div>
                     <?php foreach ($activeHours as $hour): ?>
@@ -599,7 +599,7 @@ include '../includes/header.php';
                     $dayEvents = isset($eventsByDate[$dayDate]) ? $eventsByDate[$dayDate] : [];
                 ?>
                     <div class="day-column" style="flex: 1; border-left: 1px solid #ddd;">
-                        <div class="day-header" style="height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; background: <?= $isToday ? '#ffc107' : '#28a745' ?>; color: white; font-size: 12px; text-align: center;">
+                        <div class="day-header" style="height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; background: <?= $isToday ? '#ffc107' : '#8db3a0' ?>; color: white; font-size: 12px; text-align: center;">
                             <?= $dayNames[$dayOfWeek] ?><br>
                             <small><?= date('d.m', strtotime($dayDate)) ?></small>
                         </div>
@@ -751,7 +751,7 @@ include '../includes/header.php';
                 <div class="row align-items-center">
                     <div class="col-2">
                         <a href="?view=month&month=<?= $currentMonth == 1 ? 12 : $currentMonth - 1 ?>&year=<?= $currentMonth == 1 ? $currentYear - 1 : $currentYear ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-left"></i>
                         </a>
                     </div>
@@ -761,7 +761,7 @@ include '../includes/header.php';
                     </div>
                     <div class="col-2">
                         <a href="?view=month&month=<?= $currentMonth == 12 ? 1 : $currentMonth + 1 ?>&year=<?= $currentMonth == 12 ? $currentYear + 1 : $currentYear ?>&type=<?= $eventTypeFilter ?>" 
-                           class="btn btn-outline-success">
+                           class="btn btn-outline-secondary">
                             <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
@@ -776,7 +776,7 @@ include '../includes/header.php';
                             <?php 
                             $dayHeaders = ['Pondelok', 'Utorok', 'Streda', 'Štvrtok', 'Piatok', 'Sobota', 'Nedeľa'];
                             foreach ($dayHeaders as $dayHeader): ?>
-                                <th style="background: #28a745; color: white; text-align: center; padding: 10px; font-weight: bold; width: 14.28%;">
+                                <th style="background: #8db3a0; color: white; text-align: center; padding: 10px; font-weight: bold; width: 14.28%;">
                                     <?= $dayHeader ?>
                                 </th>
                             <?php endforeach; ?>
