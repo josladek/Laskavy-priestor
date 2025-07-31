@@ -539,9 +539,26 @@ i.fas, i.far, i.fab, i.fa {
     box-shadow: var(--shadow-medium);
 }
 
+.month-grid table {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.month-grid thead th {
+    background: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 8px;
+    font-weight: bold;
+    text-align: center;
+    width: 14.28% !important;
+}
+
 .month-day {
     min-height: 120px;
-    border: 1px solid #e9ecef !important;
+    vertical-align: top !important;
+    position: relative;
+    padding: 0 !important;
 }
 
 .month-day-header {

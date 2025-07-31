@@ -770,18 +770,19 @@ include '../includes/header.php';
 
             <div class="month-grid">
                 <!-- Month calendar grid -->
-                <div class="row g-0" style="border: 1px solid #ddd;">
-                    <!-- Day headers -->
-                    <?php 
-                    $dayHeaders = ['Pondelok', 'Utorok', 'Streda', 'Štvrtok', 'Piatok', 'Sobota', 'Nedeľa'];
-                    foreach ($dayHeaders as $dayHeader): ?>
-                        <div class="col" style="background: #28a745; color: white; text-align: center; padding: 10px; font-weight: bold; border-right: 1px solid #fff;">
-                            <?= $dayHeader ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-                
-                <div class="row g-0">
+                <table class="table table-bordered mb-0" style="table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <?php 
+                            $dayHeaders = ['Pondelok', 'Utorok', 'Streda', 'Štvrtok', 'Piatok', 'Sobota', 'Nedeľa'];
+                            foreach ($dayHeaders as $dayHeader): ?>
+                                <th style="background: #28a745; color: white; text-align: center; padding: 10px; font-weight: bold; width: 14.28%;">
+                                    <?= $dayHeader ?>
+                                </th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php
                     // Calculate month calendar
                     $firstDay = mktime(0, 0, 0, $currentMonth, 1, $currentYear);
@@ -797,6 +798,7 @@ include '../includes/header.php';
                     $dayCounter = 1;
                     
                     for ($week = 0; $week < 6; $week++):
+                        echo '<tr>';
                         for ($day = 1; $day <= 7; $day++):
                             $cellDate = '';
                             $isCurrentMonth = false;
@@ -827,7 +829,7 @@ include '../includes/header.php';
                                 $dayCounter++;
                             }
                     ?>
-                            <div class="col month-day <?= $isToday ? 'today-highlight' : '' ?>" style="border: 1px solid #e9ecef; min-height: 120px;">
+                            <td class="month-day <?= $isToday ? 'today-highlight' : '' ?>" style="min-height: 120px; vertical-align: top; position: relative;">
                                 <div class="month-day-header" style="background: <?= $isCurrentMonth ? '#f8f9fa' : '#e9ecef' ?>; color: <?= $isCurrentMonth ? '#000' : '#999' ?>;">
                                     <?= date('j', strtotime($cellDate)) ?>
                                 </div>
@@ -866,14 +868,16 @@ include '../includes/header.php';
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
-                            </div>
+                            </td>
                     <?php 
                         endfor;
+                        echo '</tr>';
                         // Break if we've filled all days of the month and we're past the first week
                         if ($dayCounter > $daysInMonth && $week > 0) break;
                     endfor; 
                     ?>
-                </div>
+                    </tbody>
+                </table>
             </div>
             
             <!-- Legend -->
