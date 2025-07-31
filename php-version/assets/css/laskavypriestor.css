@@ -532,6 +532,56 @@ i.fas, i.far, i.fab, i.fa {
     background-color: #fff3cd !important;
 }
 
+/* ===== MONTHLY CALENDAR STYLES ===== */
+.month-grid {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
+.month-day {
+    min-height: 120px;
+    border: 1px solid #e9ecef !important;
+}
+
+.month-day-header {
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.month-day-content {
+    padding: 4px;
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+.month-event {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+.month-event:hover {
+    opacity: 0.8;
+}
+
+.month-event i {
+    font-size: 10px;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: linear-gradient(135deg, var(--charcoal) 0%, var(--sage-dark) 100%);

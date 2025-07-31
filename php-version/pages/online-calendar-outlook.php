@@ -855,7 +855,7 @@ include '../includes/header.php';
                                         }
                                     ?>
                                         <div class="month-event" 
-                                             style="background: <?= $bgColor ?>; color: white; margin-bottom: 2px; display: block;"
+                                             style="background: <?= $bgColor ?>; color: white;"
                                              onclick="<?= $clickHandler ?>"
                                              title="<?= htmlspecialchars($event['name']) ?> (<?= $event['time_start'] ?>-<?= $event['time_end'] ?>)">
                                             <i class="<?= $typeIcon ?> me-1"></i>
