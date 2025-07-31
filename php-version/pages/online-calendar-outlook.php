@@ -294,10 +294,10 @@ include '../includes/header.php';
                 </div>
             </div>
         </div>
-    </div>
-
+    
     <!-- Event type filter tiles -->
-    <div class="row g-3 mb-4">
+    <div class="container">
+        <div class="row g-3 mb-4">
         <?php 
         $filterColors = [
             'all' => ['bg' => '#E8F5E8', 'border' => '#A8D8A8', 'icon' => 'fas fa-th-large'],
@@ -347,7 +347,7 @@ include '../includes/header.php';
 
     <!-- 3-DAY VIEW with MS Outlook positioning -->
     <?php if ($viewType === '3day'): ?>
-        <div class="outlook-calendar">
+        <div class="outlook-calendar container-fluid">
             <div class="calendar-header text-center">
                 <div class="row align-items-center">
                     <div class="col-2">
@@ -541,7 +541,7 @@ include '../includes/header.php';
 
     <!-- WEEKLY VIEW with MS Outlook positioning -->
     <?php if ($viewType === 'week'): ?>
-        <div class="outlook-calendar">
+        <div class="outlook-calendar container-fluid">
             <div class="calendar-header text-center">
                 <div class="row align-items-center">
                     <div class="col-2">
@@ -924,6 +924,7 @@ include '../includes/header.php';
             </div>
         </div>
     <?php endif; ?>
+</div> <!-- Close container -->
 
 <!-- Event details modals -->
 <div class="modal fade" id="classModal" tabindex="-1">
