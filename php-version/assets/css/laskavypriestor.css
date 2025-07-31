@@ -465,9 +465,17 @@ i.fas, i.far, i.fab, i.fa {
 }
 
 /* ===== CALENDAR STYLES ===== */
+.outlook-calendar {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+}
+
 .calendar-grid {
     border-collapse: collapse;
     width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .calendar-grid th,
@@ -505,6 +513,8 @@ i.fas, i.far, i.fab, i.fa {
 .week-grid {
     border-collapse: collapse;
     width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .week-grid th,
